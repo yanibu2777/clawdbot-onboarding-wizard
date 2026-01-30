@@ -9,7 +9,7 @@ const program = new Command();
 
 program
   .name('clawdbot-onboarding-wizard')
-  .description('Transform from "I downloaded Clawdbot, now what?" to productive AI employee in 5 minutes')
+  .description('Add role-specific templates and workflows to your Clawdbot workspace (~/clawd)')
   .version(version);
 
 program

@@ -1,6 +1,6 @@
-# 🧙‍♂️ Clawdbot Onboarding Wizard
+# 🧙‍♂️ Clawdbot Role-Based Setup Wizard
 
-> **Transform from "I downloaded Clawdbot, now what?" to productive AI employee in 5 minutes.**
+> **Go beyond basic Clawdbot setup: Get role-specific templates and workflows that make you productive immediately.**
 
 [![npm version](https://img.shields.io/npm/v/clawdbot-onboarding-wizard)](https://www.npmjs.com/package/clawdbot-onboarding-wizard)
 [![GitHub stars](https://img.shields.io/github/stars/username/clawdbot-onboarding-wizard?style=social)](https://github.com/username/clawdbot-onboarding-wizard)
@@ -10,25 +10,77 @@ The #1 barrier to Clawdbot adoption isn't the technology—it's **knowing where 
 
 ## ⚡ Quick Start
 
-```bash
-# Option 1: Direct run (no installation)
-npx clawdbot-onboarding-wizard
+**Prerequisites:** Install Clawdbot first!
 
-# Option 2: Global installation
-npm install -g clawdbot-onboarding-wizard
-clawdbot-wizard
+```bash
+# 1. Install Clawdbot (if you haven't already)
+curl -fsSL https://clawd.bot/install.sh | bash
+
+# 2. Run official Clawdbot setup
+clawdbot onboard --install-daemon
+
+# 3. Add role-specific templates with this wizard
+npx clawdbot-onboarding-wizard init
 ```
 
-**That's it!** Answer 3-5 questions and get a fully configured AI assistant tailored to your workflow.
+**This wizard enhances your Clawdbot setup** with specialized templates and workflows for your specific role.
 
-## 🎯 What This Solves
+## 🎯 What This Adds
 
-| Without Wizard | With Wizard |
-|----------------|-------------|
-| ❌ 2-3 hours of configuration | ✅ 5-minute guided setup |
-| ❌ Reading docs to understand options | ✅ Smart questions that make sense |
-| ❌ Generic configs that don't fit your needs | ✅ Role-specific templates that work immediately |
-| ❌ 70% of users give up in first session | ✅ 95% success rate to first productive use |
+**After basic Clawdbot setup, most users still struggle with:**
+
+| Generic Setup | Role-Based Templates |
+|---------------|---------------------|
+| ❌ Generic AI assistant that doesn't know your workflow | ✅ Founder/Engineer/Creator-specific automations |
+| ❌ Manual configuration for each tool integration | ✅ Pre-built workflows that work immediately |
+| ❌ Starting from scratch with automations | ✅ Battle-tested templates for your role |
+| ❌ 3-4 weeks to get productive workflows | ✅ Productive from day 1 |
+
+**This wizard bridges the gap between "Clawdbot is running" and "Clawdbot is transforming my workflow."**
+
+## 📋 Expected Workflow
+
+**Step 1: Install Clawdbot** ([Official Docs](https://docs.clawd.bot/start/getting-started))
+```bash
+curl -fsSL https://clawd.bot/install.sh | bash
+```
+
+**Step 2: Run Official Onboarding** ([Wizard Docs](https://docs.clawd.bot/start/wizard))
+```bash
+clawdbot onboard --install-daemon
+```
+This sets up authentication, gateway, basic channels, and creates your `~/clawd` workspace.
+
+**Step 3: Add Role-Specific Templates** (This wizard!)
+```bash
+npx clawdbot-onboarding-wizard init
+```
+This enhances your `~/clawd` workspace with specialized templates, automations, and workflows for your role.
+
+**Step 4: Start Working**
+```bash
+clawdbot gateway start  # (if not already running)
+cd ~/clawd             # Your Clawdbot workspace
+cat morning-brief.md   # See your personalized setup
+```
+
+**Integration:** This wizard modifies and enhances your existing `~/clawd` workspace—it doesn't create a separate one.
+
+## 🔄 How It Works with Clawdbot
+
+**Workspace Integration:**
+- Enhances your `~/clawd/` workspace with role-specific files
+- Adds specialized `AGENTS.md`, `HEARTBEAT.md`, and automation templates
+- Files are automatically loaded by all future Clawdbot sessions
+- No additional configuration needed—Clawdbot reads your enhanced workspace
+
+**File Integration:**
+- `~/clawd/AGENTS.md` → Instructions loaded every session
+- `~/clawd/HEARTBEAT.md` → Automated periodic tasks
+- `~/clawd/templates/` → Workflow templates for your role
+- `~/clawd/automations/` → Pre-configured automation scripts
+
+**Official Documentation:** [Agent Workspace Concepts](https://docs.clawd.bot/concepts/agent-workspace)
 
 ## 🎭 Built-in Templates
 

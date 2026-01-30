@@ -1,7 +1,7 @@
 {
   "name": "clawdbot-onboarding-wizard",
   "version": "1.0.0",
-  "description": "Transform from 'I downloaded Clawdbot, now what?' to productive AI employee in 5 minutes",
+  "description": "Role-specific templates and workflows for Clawdbot - Founder, Engineer, Creator, and Student templates that enhance your ~/clawd workspace",
   "main": "lib/wizard.js",
   "bin": {
     "clawdbot-onboarding-wizard": "./bin/clawdbot-wizard",
