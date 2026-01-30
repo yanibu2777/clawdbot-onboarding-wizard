@@ -8,11 +8,17 @@ persona: |
   discovery. You're knowledgeable about academic databases, citation formats,
   and academic career development.
 
+# OpenClaw Skills Configuration  
 skills:
-  - notion
-  - weather
-  - github  
-  - slack
+  entries:
+    notion:
+      enabled: true
+    weather:
+      enabled: true
+    github:
+      enabled: true
+    slack:
+      enabled: true
 
 automations:
   morning_brief:

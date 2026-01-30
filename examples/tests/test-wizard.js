@@ -32,8 +32,7 @@ async function testTemplateConfig(userType, mockAnswers) {
     integrations: integrations,
     workspace: {
       name: `${userType}-ai-employee`,
-      description: `AI employee setup for ${userType}`,
-      skills: template.skills
+      description: `AI employee setup for ${userType}`
     },
     created: new Date().toISOString()
   };
@@ -58,7 +57,8 @@ async function runTests() {
     const founderConfig = await testTemplateConfig('founder', mockFounderAnswers);
     
     console.log('✅ Founder template test passed');
-    console.log(`   Skills: ${founderConfig.workspace.skills.join(', ')}`);
+    const founderSkills = founderConfig.template.skills.entries ? Object.keys(founderConfig.template.skills.entries) : founderConfig.template.skills;
+    console.log(`   Skills: ${founderSkills.join(', ')}`);
     console.log(`   Automations: ${Object.keys(founderConfig.template.automations).length}\n`);
 
     // Test 2: Engineer template in test mode  
@@ -76,7 +76,8 @@ async function runTests() {
     const engineerConfig = await testTemplateConfig('engineer', mockEngineerAnswers);
     
     console.log('✅ Engineer template test passed');
-    console.log(`   Skills: ${engineerConfig.workspace.skills.join(', ')}`);
+    const engineerSkills = engineerConfig.template.skills.entries ? Object.keys(engineerConfig.template.skills.entries) : engineerConfig.template.skills;
+    console.log(`   Skills: ${engineerSkills.join(', ')}`);
     console.log(`   Automations: ${Object.keys(engineerConfig.template.automations).length}\n`);
 
     // Test 3: Creator template
@@ -93,7 +94,8 @@ async function runTests() {
     const creatorConfig = await testTemplateConfig('creator', mockCreatorAnswers);
     
     console.log('✅ Creator template test passed');
-    console.log(`   Skills: ${creatorConfig.workspace.skills.join(', ')}`);
+    const creatorSkills = creatorConfig.template.skills.entries ? Object.keys(creatorConfig.template.skills.entries) : creatorConfig.template.skills;
+    console.log(`   Skills: ${creatorSkills.join(', ')}`);
     console.log(`   Automations: ${Object.keys(creatorConfig.template.automations).length}\n`);
 
     // Test 4: Student template
@@ -110,7 +112,8 @@ async function runTests() {
     const studentConfig = await testTemplateConfig('student', mockStudentAnswers);
     
     console.log('✅ Student template test passed');
-    console.log(`   Skills: ${studentConfig.workspace.skills.join(', ')}`);
+    const studentSkills = studentConfig.template.skills.entries ? Object.keys(studentConfig.template.skills.entries) : studentConfig.template.skills;
+    console.log(`   Skills: ${studentSkills.join(', ')}`);
     console.log(`   Automations: ${Object.keys(studentConfig.template.automations).length}\n`);
 
     // Test 5: Validate workspace creation (without actually creating files)

@@ -7,12 +7,19 @@ persona: |
   content performance metrics, and creator economy trends. You help with content
   planning, scheduling, analytics, and growth optimization.
 
+# OpenClaw Skills Configuration
 skills:
-  - notion
-  - weather  
-  - slack
-  - github
-  - openai-image-gen
+  entries:
+    notion:
+      enabled: true
+    weather:
+      enabled: true
+    slack:
+      enabled: true
+    github:
+      enabled: true
+    openai-image-gen:
+      enabled: true
 
 automations:
   morning_brief:

@@ -1,11 +1,18 @@
 name: 'Software Engineer'
 description: 'Automate code reviews, OSS tracking, and technical learning'
+# OpenClaw Skills Configuration
 skills:
-  - github
-  - slack
-  - notion
-  - coding-agent
-  - tmux
+  entries:
+    github:
+      enabled: true
+    slack:
+      enabled: true
+    notion:
+      enabled: true
+    coding-agent:
+      enabled: true
+    tmux:
+      enabled: true
 
 automations:
   morning_brief:
