@@ -23,7 +23,7 @@ openclaw onboard --install-daemon
 git clone https://github.com/yanibu2777/openclaw-role-wizard.git
 cd openclaw-role-wizard
 npm install
-npm start
+npm start init
 ```
 
 **This wizard enhances your OpenClaw setup** with specialized templates and workflows for your specific role.
@@ -59,7 +59,7 @@ This sets up authentication, gateway, basic channels, and creates your `~/clawd`
 git clone https://github.com/yanibu2777/openclaw-role-wizard.git
 cd openclaw-role-wizard
 npm install
-npm start
+npm start init
 ```
 This enhances your `~/clawd` workspace with specialized templates, automations, and workflows for your role.
 
